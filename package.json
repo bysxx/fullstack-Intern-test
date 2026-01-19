@@ -1,14 +1,14 @@
 {
-  "name": "next15-supabase-template-fullstack-bysxx",
+  "name": "next15-template-fullstack-bysxx",
   "version": "0.1.0",
   "engines": {
     "node": ">=18.0.0"
   },
-  "description": "Fullstack Next.js 15 + Supabase + TypeScript Template",
+  "description": "Fullstack Next.js 15 + TypeScript Template",
   "author": "bysxx <0415white@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bysxx/next15-supabase-template"
+    "url": "https://github.com/bysxx/next15-template"
   },
   "license": "MIT",
   "scripts": {
@@ -23,8 +23,6 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "@supabase/ssr": "^0.6.1",
-    "@supabase/supabase-js": "^2.57.4",
     "@tailwindcss/postcss": "^4.1.12",
     "@tanstack/react-query": "^5.89.0",
     "@tanstack/react-query-devtools": "^5.29.2",

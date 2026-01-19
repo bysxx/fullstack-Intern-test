@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "headline": "2025 Spring Collection",
+    "subCopy": "Discover timeless elegance",
+    "ctaText": "Shop Now"
+  },
+  "products": [
+    {
+      "id": 1,
+      "brand": "ZARA",
+      "name": "T-Shirt",
+      "price": 89000,
+      "image": "https://static.zara.net/assets/public/907d/494d/f34e45e3b2e6/51411087323a/08054308800-000-p/08054308800-000-p.jpg?ts=1768468765139&w=974"
+    },
+    {
+      "id": 2,
+      "brand": "ZARA",
+      "name": "Bag",
+      "price": 240000,
+      "image": "https://static.zara.net/assets/public/ee9a/ea18/be5447d4bca7/c0d2c8d24220/13510720800-p/13510720800-p.jpg?ts=1768314256628&w=1440"
+    },
+    {
+      "id": 3,
+      "brand": "Lemaire",
+      "name": "Coat",
+      "price": 1290000,
+      "image": "https://www.lemaire.fr/cdn/shop/files/CO1132LF1495_BK990_1.webp?v=1750862129&width=940"
+    },
+    {
+      "id": 4,
+      "brand": "Lemaire",
+      "name": "Shirt",
+      "price": 1290000,
+      "image": "https://www.lemaire.fr/cdn/shop/files/SH1258LF1389_BK998_6.webp?v=1767611043&width=940"
+    }
+  ]
+}

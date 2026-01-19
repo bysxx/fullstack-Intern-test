@@ -1,31 +1,16 @@
 "use server";
 import { redirect } from "next/navigation";
-import { createClient } from "utils/supabase-server";
 
 export async function getUser() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  return user;
+  // TODO: Implement authentication
+  return null;
 }
 
 export async function signIn(email: string, password: string) {
-  const supabase = await createClient();
-
-  const { error } = await supabase.auth.signInWithPassword({
-    email,
-    password,
-  });
-
-  if (error) {
-    throw new Error(error.message);
-  }
-
-  redirect("/");
+  // TODO: Implement authentication
+  throw new Error("Authentication not implemented");
 }
 
 export async function signOut() {
-  const supabase = await createClient();
-  await supabase.auth.signOut();
+  // TODO: Implement authentication
 }

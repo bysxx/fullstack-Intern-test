@@ -2,7 +2,6 @@
 
 import type React from "react";
 import { useState } from "react";
-import { supabase } from "utils/supabase-client";
 
 export default function RegisterForm() {
   const [email, setEmail] = useState("");
@@ -17,19 +16,8 @@ export default function RegisterForm() {
     setError("");
     setSuccess("");
 
-    const { data, error } = await supabase.auth.signUp({ email, password });
-    if (error) {
-      setError(error.message);
-    } else {
-      // users 테이블에도 row 생성
-      if (data.user?.id && data.user?.email) {
-        await supabase.from("users").insert({
-          id: data.user.id,
-          email: data.user.email,
-        });
-      }
-      setSuccess("회원가입이 완료되었습니다! 이메일을 확인해 주세요.");
-    }
+    // TODO: Implement registration logic
+    setError("Registration not implemented");
     setIsLoading(false);
   };
 

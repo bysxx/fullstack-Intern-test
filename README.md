@@ -1,12 +1,11 @@
-# Next.js 15 + Supabase + TypeScript Template
+# Next.js 15 + TypeScript Template
 
-Modern full‑stack starter powered by Next.js 15 (App Router), React 19, Supabase, and TypeScript. It ships with SSR-friendly Supabase auth, feature‑based file structure, Tailwind CSS, React Query, Zustand, and a ready-to-use testing setup.
+Modern full-stack starter powered by Next.js 15 (App Router), React 19, and TypeScript. It ships with feature-based file structure, Tailwind CSS, React Query, and Zustand.
 
 ## Tech Stack
 
 - Next.js 15 (App Router, Server Components, Server Actions)
 - React 19 + TypeScript
-- Supabase (`@supabase/supabase-js`, `@supabase/ssr`)
 - Tailwind CSS
 - TanStack Query (React Query) v5
 - Zustand state management
@@ -21,8 +20,6 @@ Modern full‑stack starter powered by Next.js 15 (App Router), React 19, Supaba
 ```bash
 pnpm install
 
-# Create .env.local with Supabase credentials (see below)
-
 pnpm dev
 ```
 
@@ -32,21 +29,6 @@ Production run:
 pnpm build
 pnpm start
 ```
-
-## Environment Variables
-
-Create a `.env.local` at the project root:
-
-```env
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-These are required by:
-
-- `src/utils/supabase-client.ts` (client-side)
-- `src/utils/supabase-server.ts` (server-side)
-- `src/utils/supabase-middleware.ts` and `src/middleware.ts` (SSR auth session)
 
 ## Scripts
 
@@ -89,19 +71,9 @@ src/
   hooks/                      # Shared hooks
   stores/                     # Zustand stores
   styles/                     # Global styles (Tailwind)
-  types/                      # Shared types (e.g., Supabase typed DB)
-  utils/                      # Utilities (Supabase client/server/middleware)
-
-middleware.ts                 # Supabase session middleware
+  types/                      # Shared types
+  utils/                      # Utilities
 ```
-
-## Supabase Auth (SSR‑friendly)
-
-- Client: `src/utils/supabase-client.ts` initializes the browser client.
-- Server: `src/utils/supabase-server.ts` creates a cookie-aware server client.
-- Middleware: `src/middleware.ts` + `src/utils/supabase-middleware.ts` keep sessions in sync and can gate routes (redirects unauthenticated users to `/login`).
-
-Auth UI is scaffolded under `src/app/(auth)/login` and `src/app/(auth)/register`, using Server Actions in `src/app/(auth)/actions.ts`.
 
 ## Styling
 
@@ -124,9 +96,8 @@ Auth UI is scaffolded under `src/app/(auth)/login` and `src/app/(auth)/register`
 
 This template works great on Vercel:
 
-1. Set `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in your project environment.
-2. Build command: `pnpm build`
-3. Output: Next.js defaults
+1. Build command: `pnpm build`
+2. Output: Next.js defaults
 
 ## License
 
