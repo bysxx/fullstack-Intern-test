@@ -1,5 +1,4 @@
 import "@styles/global.css";
-import GlobalNav from "@components/ui/global-nav";
 import { Analytics } from "@vercel/analytics/next";
 import type { ReactNode } from "react";
 import { Providers } from "./provider";
@@ -14,7 +13,6 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     <html lang="ko">
       <body>
         <Providers>
-          <GlobalNav />
           {children}
           <Analytics />
         </Providers>
