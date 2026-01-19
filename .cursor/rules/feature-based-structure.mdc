@@ -1,0 +1,51 @@
+---
+alwaysApply: true
+---
+# Feature-Based Directory Structure (피처 기반 디렉터리 구조)
+
+## Rule (규칙)
+
+Organize code by feature (or domain) rather than by file type. This means all files related to a single feature—components, hooks, server actions, and pages—should be colocated within the same directory.
+
+파일 유형(예: components, hooks)이 아닌 피처(도메인) 단위로 코드를 구성합니다. 즉, 특정 피처와 관련된 모든 파일(컴포넌트, 훅, 서버 액션, 페이지 등)은 같은 디렉터리 내에 위치해야 합니다.
+
+## Reasoning (근거)
+
+- **High Cohesion (높은 응집도):** Related code is grouped together, making it easier to find, understand, and modify everything related to a feature in one place.
+- **Low Coupling (낮은 결합도):** Features are more self-contained and independent, reducing dependencies across different parts of the application.
+- **Improved Scalability and Maintenance (확장성 및 유지보수성 향상):** It is significantly easier to develop, manage, or even remove a feature when all its code is neatly organized in a single location.
+
+## Recommended Pattern (권장 패턴)
+
+Create a new directory for each feature under a common parent directory like `src/app/`. The `workspaces` directory is a perfect example of this pattern.
+
+`src/app/`와 같은 공통 상위 디렉터리 아래에 각 피처별로 새 디렉터리를 생성합니다. `workspaces` 디렉터리가 이 패턴의 좋은 예시입니다.
+
+Use Server Action (actions.ts) rather than API Route if possible
+
+```
+src/app/
+└── [feature-name]/
+    ├── page.tsx          # Page entry point (Server Component)
+    ├── page-client.tsx   # Main client component for the page
+    ├── layout.tsx        # Layout specific to the feature
+    ├── actions.ts        # Server Actions for the feature
+    ├── types.ts          # Types for the feature
+    ├── query.ts          # Queries(Tanstack Query) for the feature
+    ├── components/       # Feature-specific React components
+    │   └── ...
+    ├── hooks/            # Feature-specific custom hooks
+    │   └── ...
+    └── utils.ts          # Feature-specific utility functions
+```
+
+### File and Folder Descriptions (파일 및 폴더 설명)
+
+- **`page.tsx`**: The entry point for the route, typically a Server Component. It can fetch initial data and should render the `page-client.tsx` component.
+- **`page-client.tsx`**: A component marked with `"use client"`. It handles all client-side logic, including state management, event handlers, and interactivity.
+- **`layout.tsx`**: The layout that wraps the feature's pages and any sub-routes.
+- **`actions.ts`**: Contains Server Actions (`"use server"`) used by the feature, such as form submissions or data mutations.
+- **`types.ts`**: Contains Types used by the feature, such as database sub type, util type, ...
+- **`components/`**: A directory for React components that are only used within this specific feature.
+- **`hooks/`**: A directory for custom hooks that are specific to this feature's logic.
+- **`utils.ts`**: A file for utility functions that are only needed for this feature.

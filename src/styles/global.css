@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --header-height: 64px; /* 모바일 헤더 높이 */
+}

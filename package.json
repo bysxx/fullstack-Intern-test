@@ -1,0 +1,59 @@
+{
+  "name": "next15-supabase-template-fullstack-bysxx",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "description": "Fullstack Next.js 15 + Supabase + TypeScript Template",
+  "author": "bysxx <0415white@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bysxx/next15-supabase-template"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "biome lint ./src",
+    "format": "biome format ./src",
+    "check": "biome check ./src",
+    "check:fix": "biome check --write ./src",
+    "type": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@supabase/ssr": "^0.6.1",
+    "@supabase/supabase-js": "^2.57.4",
+    "@tailwindcss/postcss": "^4.1.12",
+    "@tanstack/react-query": "^5.89.0",
+    "@tanstack/react-query-devtools": "^5.29.2",
+    "@tanstack/react-query-next-experimental": "^5.29.2",
+    "@vercel/analytics": "^1.5.0",
+    "babel-plugin-react-compiler": "19.1.0-rc.2",
+    "classnames": "^2.5.1",
+    "next": "16.1.2",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-hot-toast": "^2.6.0",
+    "tailwind-scrollbar": "^4.0.2",
+    "tailwindcss": "^4.1.13",
+    "tailwindcss-scrollbar": "^0.1.0",
+    "zod": "^4.0.10",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.0",
+    "@types/node": "^20.12.7",
+    "@types/react": "19.2.8",
+    "@types/react-dom": "19.2.3",
+    "typescript": "^5.8.3"
+  },
+  "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321",
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.2.8",
+      "@types/react-dom": "19.2.3"
+    }
+  }
+}
