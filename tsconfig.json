@@ -56,6 +56,9 @@
       ],
       "@components/*": [
         "./components/*"
+      ],
+      "@/*": [
+        "./*"
       ]
     },
     "plugins": [

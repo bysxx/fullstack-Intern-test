@@ -3,6 +3,10 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-sans)', 'sans-serif'],
+        serif: ['var(--font-serif)', 'serif'],
+      },
       boxShadow: {
         bottom: '0 6px 13px 0px rgba(0, 0, 0, 0.15)',
       },
@@ -21,7 +25,4 @@ module.exports = {
   plugins: [
     require('tailwind-scrollbar'),
   ],
-  extend: {
-    display: ['group-hover'],
-  },
 };
